@@ -1,7 +1,8 @@
-const fatorial = require('./fatorial');
-const argv = require('yargs').demandOption('num').argv;
+import { fatorial } from './fatorial';
+import yargs from 'yargs';
+const argv = yargs.demandOption('num').argv;
 
-console.log('n-fatorial');
+console.log('=== n-fatorial ===');
 
 // console.log(`Executando o script a partir do diretorio ${process.cwd()}`);
 
@@ -24,4 +25,4 @@ const num = parseInt(argv.num);
 
 console.log(`O fatorial de ${num} é igual a ${fatorial(num)}`);
 
-console.log(module.paths)
+// console.log(module.paths)
